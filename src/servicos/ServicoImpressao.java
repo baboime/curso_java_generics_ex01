@@ -3,15 +3,15 @@ package servicos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServicoImpressao {
+public class ServicoImpressao<T> {
 	
-	private List<Integer> lista = new ArrayList<>();
+	private List<T> lista = new ArrayList<>();
 	
-	public void adicionaValor(int valor) {
+	public void adicionaValor(T valor) {
 		lista.add(valor);
 	}
 	
-	public int primeiro () {
+	public Object primeiro () {
 		if (lista.isEmpty()) {
 			throw new IllegalStateException("Lista esta vazia");
 		}

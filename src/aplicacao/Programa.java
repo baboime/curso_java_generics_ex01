@@ -10,13 +10,14 @@ public class Programa {
 
 		Scanner sc = new Scanner(System.in);
 		
-		ServicoImpressao si = new ServicoImpressao();
+//		ServicoImpressao<Integer> si = new ServicoImpressao<>();
+		ServicoImpressao<String> si = new ServicoImpressao<>();
 		
 		System.out.print("Quantos valores: ");
 		Integer valores = sc.nextInt();
 		
 		for (int i=0; i<valores; i++) {
-			si.adicionaValor(sc.nextInt());
+			si.adicionaValor(sc.next());
 		}
 		
 		si.imprime();
